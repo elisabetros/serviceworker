@@ -1,5 +1,5 @@
 "user strict";
-window.onload= function() => {
+window.onload = function() {
   if (navigator.serviceWorker) {
     navigator.serviceWorker
       .register("./service-worker.js", { scope: "./about" })
@@ -11,7 +11,8 @@ window.onload= function() => {
       });
   } else {
     console.log("Service Worker is not supported in this browser.");
-  }}
+  }
+};
 
 let endpoint =
   "http://ekaterinagp.dk/kea/wordpress/wp-json/wp/v2/opskrifter?_embed&fbclid=IwAR2yUdAUNX80ukrXBprITALfBQdoLnWY6y_1TTuLvE54pg7Y-Qe4fEA_4w4&per_page=100";
